@@ -1,0 +1,171 @@
+{
+  animations: [
+    {
+      path: 'sampledata/models/andy.fbx',
+    },
+  ],
+  materials: [
+    {
+      name: 'Material_106',
+      parameters: [
+        {
+          baseColor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          baseColorMap: '509',
+        },
+        {
+          normalMap: null,
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
+    {
+      name: 'Material_108',
+      parameters: [
+        {
+          baseColor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          baseColorMap: '518',
+        },
+        {
+          normalMap: null,
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
+    {
+      name: 'Material_110',
+      parameters: [
+        {
+          baseColor: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          baseColorMap: '527',
+        },
+        {
+          normalMap: null,
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'Color',
+      'TexCoord',
+      'Orientation',
+      'BoneIndices',
+      'BoneWeights',
+    ],
+    collision: {},
+    file: 'sampledata/models/andy.fbx',
+    name: 'andy',
+    recenter: 'root',
+    scale: 11.329764000000001,
+  },
+  samplers: [
+    {
+      file: 'sampledata/models\\andy.fbm\\509.png',
+      name: '509',
+      pipeline_name: 'andy.fbm\\509.png',
+    },
+    {
+      file: 'sampledata/models\\andy.fbm\\513.png',
+      name: '513',
+      pipeline_name: 'andy.fbm\\513.png',
+    },
+    {
+      file: 'sampledata/models\\andy.fbm\\518.png',
+      name: '518',
+      pipeline_name: 'andy.fbm\\518.png',
+    },
+    {
+      file: 'sampledata/models\\andy.fbm\\531.png',
+      name: '531',
+      pipeline_name: 'andy.fbm\\531.png',
+    },
+    {
+      file: 'sampledata/models\\andy.fbm\\522.png',
+      name: '522',
+      pipeline_name: 'andy.fbm\\522.png',
+    },
+    {
+      file: 'sampledata/models\\andy.fbm\\527.png',
+      name: '527',
+      pipeline_name: 'andy.fbm\\527.png',
+    },
+  ],
+  version: '0.54:2',
+}
