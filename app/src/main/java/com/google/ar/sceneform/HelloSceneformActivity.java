@@ -91,7 +91,7 @@ public class HelloSceneformActivity extends AppCompatActivity {
           // Create the transformable andy and add it to the anchor.
           TransformableNode andy = new TransformableNode(arFragment.getTransformationSystem());
           andy.setParent(anchorNode);
-          andy.setRenderable(andyRenderable);
+//          andy.setRenderable(andyRenderable);
           andy.select();
             ViewRenderable.builder()
                     .setView(this, R.layout.render)
