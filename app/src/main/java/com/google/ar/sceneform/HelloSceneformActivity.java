@@ -25,6 +25,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.ar.core.Anchor;
@@ -42,6 +43,7 @@ public class HelloSceneformActivity extends AppCompatActivity {
 
   private ArFragment arFragment;
   private ModelRenderable andyRenderable;
+    EditText ET;
 //  private final Context context;
   private int c=0;
 
@@ -59,6 +61,7 @@ public class HelloSceneformActivity extends AppCompatActivity {
 
     setContentView(R.layout.activity_ux);
     arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.ux_fragment);
+      ET = (EditText) findViewById(R.id.editText);
 
     // When you build a Renderable, Sceneform loads its resources in the background while returning
     // a CompletableFuture. Call thenAccept(), handle(), or check isDone() before calling get().
@@ -79,7 +82,9 @@ public class HelloSceneformActivity extends AppCompatActivity {
         (HitResult hitResult, Plane plane, MotionEvent motionEvent) -> {
           if (andyRenderable == null) {
             return;
+//                  Toast.makeText(this, "Please Enter Name of object first", Toast.LENGTH_LONG).show();
           }
+
 
           // Create the Anchor.
           Anchor anchor = hitResult.createAnchor();
@@ -100,7 +105,7 @@ public class HelloSceneformActivity extends AppCompatActivity {
                             (renderable) -> {
                                 andy.setRenderable(renderable);
                                 TextView textView = (TextView) renderable.getView();
-                                textView.setText("Hello world "+c+"");
+                                textView.setText(ET.getText());
                             })
                     .exceptionally(
                             (throwable) -> {
