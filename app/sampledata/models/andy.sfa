@@ -137,32 +137,32 @@
   },
   samplers: [
     {
-      file: 'sampledata/models\\andy.fbm\\509.png',
+      file: 'sampledata/models/andy.fbm/509.png',
       name: '509',
       pipeline_name: 'andy.fbm\\509.png',
     },
     {
-      file: 'sampledata/models\\andy.fbm\\513.png',
+      file: 'sampledata/models/andy.fbm/513.png',
       name: '513',
       pipeline_name: 'andy.fbm\\513.png',
     },
     {
-      file: 'sampledata/models\\andy.fbm\\518.png',
+      file: 'sampledata/models/andy.fbm/518.png',
       name: '518',
       pipeline_name: 'andy.fbm\\518.png',
     },
     {
-      file: 'sampledata/models\\andy.fbm\\531.png',
+      file: 'sampledata/models/andy.fbm/531.png',
       name: '531',
       pipeline_name: 'andy.fbm\\531.png',
     },
     {
-      file: 'sampledata/models\\andy.fbm\\522.png',
+      file: 'sampledata/models/andy.fbm/522.png',
       name: '522',
       pipeline_name: 'andy.fbm\\522.png',
     },
     {
-      file: 'sampledata/models\\andy.fbm\\527.png',
+      file: 'sampledata/models/andy.fbm/527.png',
       name: '527',
       pipeline_name: 'andy.fbm\\527.png',
     },

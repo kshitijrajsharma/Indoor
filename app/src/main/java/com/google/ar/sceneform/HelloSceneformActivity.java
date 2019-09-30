@@ -25,6 +25,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.MotionEvent;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.google.ar.core.Anchor;
 import com.google.ar.core.HitResult;
@@ -33,16 +34,17 @@ import com.google.ar.sceneform.AnchorNode;
 import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.ux.ArFragment;
 import com.google.ar.sceneform.ux.TransformableNode;
+import com.google.ar.sceneform.rendering.ViewRenderable;
 
-/**
- * This is an example activity that uses the Sceneform UX package to make common AR tasks easier.
- */
 public class HelloSceneformActivity extends AppCompatActivity {
   private static final String TAG = HelloSceneformActivity.class.getSimpleName();
   private static final double MIN_OPENGL_VERSION = 3.0;
 
   private ArFragment arFragment;
   private ModelRenderable andyRenderable;
+//  private final Context context;
+  private int c=0;
+
 
   @Override
   @SuppressWarnings({"AndroidApiChecker", "FutureReturnValueIgnored"})
@@ -67,7 +69,7 @@ public class HelloSceneformActivity extends AppCompatActivity {
         .exceptionally(
             throwable -> {
               Toast toast =
-                  Toast.makeText(this, "Unable to load andy renderable", Toast.LENGTH_LONG);
+                  Toast.makeText(this, "Unable to load renderable", Toast.LENGTH_LONG);
               toast.setGravity(Gravity.CENTER, 0, 0);
               toast.show();
               return null;
@@ -81,6 +83,8 @@ public class HelloSceneformActivity extends AppCompatActivity {
 
           // Create the Anchor.
           Anchor anchor = hitResult.createAnchor();
+          c=c+1;
+            Toast.makeText(this, "Location Id: "+c+"", Toast.LENGTH_LONG).show();
           AnchorNode anchorNode = new AnchorNode(anchor);
           anchorNode.setParent(arFragment.getArSceneView().getScene());
 
@@ -89,6 +93,19 @@ public class HelloSceneformActivity extends AppCompatActivity {
           andy.setParent(anchorNode);
           andy.setRenderable(andyRenderable);
           andy.select();
+            ViewRenderable.builder()
+                    .setView(this, R.layout.render)
+                    .build()
+                    .thenAccept(
+                            (renderable) -> {
+                                andy.setRenderable(renderable);
+                                TextView textView = (TextView) renderable.getView();
+                                textView.setText("Hello world "+c+"");
+                            })
+                    .exceptionally(
+                            (throwable) -> {
+                                throw new AssertionError("Could not load plane card view.", throwable);
+                            });
         });
   }
 
